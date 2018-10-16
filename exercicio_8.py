@@ -69,7 +69,12 @@ def main():
 
 	opcoes = {'cript' : criptografar, 'decript' : decriptografar}
 
-	opcoes[command] (message)
+	try:
+		opcoes[command] (message)
+		
+	except KeyError as e:
+ 		print ('Comando Inválido')
+		
 
 if __name__ == '__main__':
 	main()
